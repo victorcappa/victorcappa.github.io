@@ -6,7 +6,12 @@
     <script scr="aframe-components.tsx"></script>
     <body style="margin : 0px; overflow: hidden;">
 <a-scene id='ascene' xrextras-tap-recenter landing-page xrextras-loading xrextras-runtime-error xrextras-gesture-detector xrweb>
-  
+  <a-camera
+    id="camera"
+    position="0 8 8"
+    raycaster="objects: .cantap"
+    cursor="fuse: false; rayOrigin: mouse;">
+  </a-camera>  
   <a-entity light="type:directional; castShadow:true; color:white; intensity:1.0" position="5 10 7"></a-entity>
   
 
@@ -24,12 +29,7 @@
     shadow="receive: true"
     position="0 0.5 1"
     >
-<a-camera
-    id="camera"
-    position="0 8 8"
-    raycaster="objects: .cantap"
-    cursor="fuse: false; rayOrigin: mouse;">
-  </a-camera>     </a-entity>
+   </a-entity>
     
     </a-scene>
     </body>
